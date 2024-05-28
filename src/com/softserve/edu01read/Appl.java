@@ -6,7 +6,15 @@ import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * <b>Super class</b>
+ */
 public class Appl {
+
+    /**
+     *
+     * @param args Arguments form copmmand line.
+     */
     public static void main(String[] args) {
         /*
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +36,7 @@ public class Appl {
         // /*
         int x = 0;
         String s = "0";
-        System.out.print("Input number: ");
+        System.out.print("\\ Input number: ");
         try (Scanner sc = new Scanner(System.in)) {
             //x = sc.nextInt();
             //
