@@ -2,6 +2,9 @@ package com.softserve.edu02loop;
 
 import java.util.Scanner;
 
+/**
+ * Super Class
+ */
 public class Sum {
     public static void main(String[] args) {
         /*
