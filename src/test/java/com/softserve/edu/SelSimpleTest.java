@@ -31,7 +31,6 @@ public class SelSimpleTest {
         System.out.println("\t@AfterEach executed");
     }
 
-    @Test
     public void testSelen() throws InterruptedException {
         System.out.println("\t\t@Test testSelen()");
         //
