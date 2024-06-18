@@ -70,7 +70,7 @@ public class GreencityTest {
         driver.findElement(By.id("password")).click();
         Thread.sleep(1000);
         //
-        driver.findElement(By.id("password")).sendKeys("Qwerty_1");
+        driver.findElement(By.id("password")).sendKeys("Qwerty_1"); // Invalid Solution
         Thread.sleep(1000);
         //
         driver.findElement(By.cssSelector("button.ubsStyle")).click();
