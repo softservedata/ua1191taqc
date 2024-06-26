@@ -59,7 +59,7 @@ public class PageFactoryTest {
     @AfterAll
     public static void tear() {
         if (driver != null) {
-            driver.quit(); // close()
+            //driver.quit(); // close()
         }
         System.out.println("@AfterAll executed");
     }
