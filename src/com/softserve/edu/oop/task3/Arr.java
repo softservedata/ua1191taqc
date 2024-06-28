@@ -54,7 +54,7 @@ public class Arr {
 
         //Task 6
         Collections.sort(arrayList);
-        System.out.println("Sorted Array:" + arrayList);
+        System.out.println("Sorted Array: " + arrayList);
     }
 
 }
