@@ -1,60 +1,97 @@
 package com.softserve.edu.oop.task3;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Arr {
-    public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
+    private ArrayList<Integer> arrayList;
+
+    public Arr() {
+        arrayList = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
             int randomNumber = random.nextInt(100) + 1;
             arrayList.add(randomNumber);
         }
-        //Task 1
+    }
+
+    public ArrayList<Integer> getArrayList() {
+        return arrayList;
+    }
+
+    // Task 1: Print the ArrayList
+    public void printArrayList() {
         System.out.println(arrayList);
+    }
 
-        //Task 2
-        int maxNumber = Collections.max(arrayList);
-        int minNumber = Collections.min(arrayList);
+    // Task 2: Find and print the maximum and minimum number
+    public int findMaxNumber() {
+        return Collections.max(arrayList);
+    }
 
-        System.out.println("Max number: " + maxNumber);
-        System.out.println("Min number: " + minNumber);
+    public int findMinNumber() {
+        return Collections.min(arrayList);
+    }
 
-        //Task 3
-        double averageNum;
+    // Task 3: Calculate and print the average value
+    public double calculateAverage() {
         double sum = 0;
-
-        for (int i = 0; i < arrayList.size(); i++) {
-            sum += i;
+        for (int number : arrayList) {
+            sum += number;
         }
-        averageNum = sum / arrayList.size();
+        return sum / arrayList.size();
+    }
 
-        System.out.println("Average: " + averageNum);
-
-        //Task4
+    // Task 4: Remove all even numbers
+    public void removeEvenNumbers() {
         for (int i = arrayList.size() - 1; i >= 0; i--) {
             if (arrayList.get(i) % 2 == 0) {
                 arrayList.remove(i);
             }
         }
-
-        System.out.println("Without even: " + arrayList);
-
-        //Task5
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number (0-100): ");
-        int checkNumber = scanner.nextInt();
-        if (arrayList.contains(checkNumber))
-            System.out.println("Number " + checkNumber + " is in Array");
-        else
-            System.out.println("Number " + checkNumber + " is not in Array");
-
-
-        //Task 6
-        Collections.sort(arrayList);
-        System.out.println("Sorted Array: " + arrayList);
     }
 
+    // Task 5: Check if the collection contains a given number
+    public boolean containsNumber(int number) {
+        return arrayList.contains(number);
+    }
+
+    // Task 6: Sort the collection in ascending order
+    public void sortArrayList() {
+        Collections.sort(arrayList);
+    }
+
+    public static void main(String[] args) {
+        Arr arr = new Arr();
+
+        // Task 1
+        arr.printArrayList();
+
+        // Task 2
+        int maxNumber = arr.findMaxNumber();
+        int minNumber = arr.findMinNumber();
+        System.out.println("Max number: " + maxNumber);
+        System.out.println("Min number: " + minNumber);
+
+        // Task 3
+        double averageNum = arr.calculateAverage();
+        System.out.println("Average: " + averageNum);
+
+        // Task 4
+        arr.removeEvenNumbers();
+        System.out.println("Without even: " + arr.getArrayList());
+
+        // Task 5
+        int checkNumber = 50; // Example number to check
+        if (arr.containsNumber(checkNumber)) {
+            System.out.println("Number " + checkNumber + " is in Array");
+        } else {
+            System.out.println("Number " + checkNumber + " is not in Array");
+        }
+
+        // Task 6
+        arr.sortArrayList();
+        System.out.println("Sorted Array: " + arr.getArrayList());
+    }
 }
