@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class TabTest {
+public class  TabTest {
 
     private static final Long ONE_SECOND_DELAY = 1000L;
     private static WebDriver driver;
