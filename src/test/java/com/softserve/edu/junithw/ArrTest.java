@@ -1,5 +1,6 @@
-package com.softserve.edu;
+package com.softserve.edu.junithw;
 
+import com.softserve.edu.Arr;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
