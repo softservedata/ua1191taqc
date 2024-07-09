@@ -36,7 +36,7 @@ public abstract class TestRunner {
     private static final Long ONE_SECOND_DELAY = 1000L;
     private static final String TIME_TEMPLATE = "yyyy-MM-dd_HH-mm-ss-S";
     protected static GuestFunctions guestFunctions;
-    protected static LocalStorageJS localStorageJS;
+    public static LocalStorageJS localStorageJS;
 
     private static  String baseUrl;
 
