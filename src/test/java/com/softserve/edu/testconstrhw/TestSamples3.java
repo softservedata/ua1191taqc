@@ -14,6 +14,7 @@ public class TestSamples3 extends TestRunner {
 
     @BeforeEach
     public void setupThis() {
+        super.setupThis();
         signIn = new SignIn(driver);
     }
 
@@ -32,7 +33,7 @@ public class TestSamples3 extends TestRunner {
             "passwordInput, true",
             "signInSubmitButton, true"
     })
-    public void verifyMandatoryFields(String fieldName, boolean isDisplayed) {
+    public void verifyMandatoryFields(String fieldName, boolean isDisplayed) throws InterruptedException {
         signIn.isFieldDisplayed(fieldName, isDisplayed);
     }
 
@@ -49,7 +50,7 @@ public class TestSamples3 extends TestRunner {
     @CsvSource({
             "samplestesgreencity.com, Перевірте коректність введеної електронної адреси"
     })
-    public void signInNotValid(String email, String message) {
+    public void signInNotValid(String email, String message) throws InterruptedException {
         signIn.signInNotValid(email, message);
     }
 

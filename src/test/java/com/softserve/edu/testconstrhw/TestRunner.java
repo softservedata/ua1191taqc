@@ -30,6 +30,10 @@ public class TestRunner {
         PageFactory.initElements(driver, this);
     }
 
+    @BeforeEach
+    public void setupThis() {
+        driver.get("https://www.greencity.cx.ua/#/ubs");
+    }
     @AfterAll
     public static void tearDown() {
         driver.quit();
